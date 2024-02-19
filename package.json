@@ -1,0 +1,32 @@
+{
+  "name": "reference",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js -e .js,.mjs,.coffee,.litcoffee,.json,.yaml",
+    "debug": "set NODE_INSPECT_RESUME_ON_START=1&&nodemon inspect app.js -e .js,.mjs,.coffee,.litcoffee,.json,.yaml",
+    "start": "node app.js",
+    "db:migrate": "npm run knex migrate:latest",
+    "db:migrate:make": "npm run knex migrate:make",
+    "db:migrate:undo": "npm run knex migrate:rollback",
+    "db:seed": "npm run knex seed:run",
+    "db:seed:make": "npm run knex seed:make",
+    "knex": "knex --knexfile modules/db/knexfile.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.4",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "knex": "^3.1.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.0.3",
+    "pg": "^8.11.3"
+  }
+}
